@@ -456,27 +456,3 @@ university.BookService.GetBook
 university.BookService.ListBooks
 university.BookService.UpdateBook
 ```
-
-## Testing Notes
-
-1. **Server State**: The server maintains state during testing. Books/students created or deleted will affect subsequent tests.
-
-2. **ID Generation**: Auto-generated IDs follow the pattern `{type}-{counter}` (e.g., `book-3`, `student-4`).
-
-3. **Stock Management**: Creating loans decreases book stock, returning books increases it.
-
-4. **Error Handling**: All services properly return gRPC status codes for error conditions.
-
-5. **Reflection**: The server supports gRPC reflection, allowing dynamic service discovery.
-
-## Screenshot Instructions
-
-When documenting your tests:
-
-1. Start the server in one terminal
-2. Run each grpcurl command in another terminal
-3. Take screenshots showing both the command and response
-4. Include error cases to demonstrate proper error handling
-5. Show service discovery commands working
-
-This comprehensive testing demonstrates all CRUD operations and business logic implemented in the University Library gRPC system.
